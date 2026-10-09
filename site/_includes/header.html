@@ -1,0 +1,25 @@
+{%- assign root = page.root | default: "" -%}
+{%- assign navstyle = "display:inline-flex;align-items:center;min-height:2.75rem;padding:0 0.25rem;color:#c5d0de;text-decoration:none;font-size:1rem;font-weight:500;" -%}
+<a class="x1" href="#main" style="position:absolute;left:1rem;top:-10rem;z-index:100;padding:0.75rem 1.25rem;background:#ffffff;color:#0a1628;font-weight:600;border-radius:0.5rem;text-decoration:none;">Skip to main content</a>
+<header style="position:sticky;top:0;z-index:50;background:#0a1628;border-bottom:1px solid rgba(74,158,255,0.16);">
+  <div style="max-width:72rem;margin:0 auto;padding:0.75rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0.5rem 1.5rem;">
+    {% include logo-link.html root=root %}
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+      <span aria-hidden="true" style="display:flex;flex-direction:column;gap:0.25rem;">
+        <span style="display:block;width:1.25rem;height:2px;background:#c5d0de;"></span>
+        <span style="display:block;width:1.25rem;height:2px;background:#c5d0de;"></span>
+        <span style="display:block;width:1.25rem;height:2px;background:#c5d0de;"></span>
+      </span>
+      <span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Main">
+      <ul>
+        {%- for item in site.data.navigation %}
+        <li><a class="x2" href="{{ root }}{{ item.url }}"{% if page.url == item.path %} aria-current="page"{% endif %} style="{{ navstyle }}">{{ item.title }}</a></li>
+        {%- endfor %}
+        <li><a class="x2" href="{{ site.data.site.jda_url }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.375rem;min-height:2.75rem;padding:0 0.25rem;color:#c5d0de;text-decoration:none;font-size:1rem;font-weight:500;">{{ site.data.site.jda_name }}<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:0.875rem;height:0.875rem;"><path d="M7 17L17 7M17 7H9M17 7V15"></path></svg>{% include newtab.html %}</a></li>
+        <li><a class="x3" href="#contact" style="display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:0 1.25rem;border:2px solid #4a9eff;border-radius:999px;color:#ffffff;text-decoration:none;font-size:1rem;font-weight:600;">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

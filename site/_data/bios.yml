@@ -1,0 +1,12 @@
+# Speaker kit bios (third person). Each paragraph is one list item.
+# The Copy button copies all paragraphs of that bio.
+- id: "bio-short-title"
+  title: "Short bio, 50 words"
+  paragraphs:
+    - "Jacob Davis is a data science, strategy, and analytics executive who builds data businesses that are useful, not just correct. Across CRM, media, martech, and healthcare, he has built analytics organizations from the ground up and turned fragmented data into products and revenue. He holds a BS in Economics from Wharton."
+- id: "bio-long-title"
+  title: "Full bio, 150 words"
+  paragraphs:
+    - "Jacob Davis is a data science, strategy, and analytics executive who turns complex data into platforms, teams, and revenue. He currently leads a healthcare data and intelligence business, building data infrastructure, licensable data products, and embedded analytics applications."
+    - "Over more than a decade he has built analytics practices from scratch, led full-funnel commercial analytics teams across the US and Mexico, and helped grow a media business from $80M to over $100M. His work has produced tens of millions in measurable revenue and client outcomes across Experian, Cheetah Digital, Aki Technologies, and Inmar."
+    - "A practitioner first, Jacob speaks on commercializing analytics, building real data science practices, and using data to drive decisions. He is a DMNews 40 under 40 honoree and holds a BS in Economics from the Wharton School."

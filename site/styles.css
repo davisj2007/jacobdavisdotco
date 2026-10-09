@@ -1,0 +1,20 @@
+/* Shared rules for jacobdavis.co. Page styles are inline; this file holds header layout and interaction states. */
+#site-nav ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:row;align-items:center;gap:1.25rem;flex-wrap:wrap}
+.nav-toggle{display:none;align-items:center;gap:0.625rem;min-height:2.75rem;min-width:2.75rem;padding:0 1rem;background:transparent;border:2px solid #4a9eff;border-radius:999px;color:#ffffff;font:600 1rem Inter,sans-serif;cursor:pointer}
+@media (max-width:60em){
+  #site-nav{flex-basis:100%}
+  #site-nav ul{flex-direction:column;align-items:flex-start;gap:0.25rem;padding:0.5rem 0 1rem}
+  .js .nav-toggle{display:inline-flex}
+  .js #site-nav{display:none}
+  .js #site-nav.open{display:block}
+}
+.x1:focus{top:1rem !important}
+.x2:hover{color:#ffffff !important;text-decoration:underline !important}
+.x3:hover{background:#4a9eff !important;color:#0a1628 !important}
+.x4:hover{background:#ffffff !important;color:#0a1628 !important}
+/* Paragraphs written in the page .md files (About "How I think", Speaking "For universities", Work "Advisory"). */
+.prose p{margin:0}
+#teaching .prose p{text-wrap:pretty}
+#advisory p{max-width:60ch}
+/* Screen-reader-only status text (copy confirmation). */
+.sr-status{position:absolute;top:0;left:0;margin:0;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}

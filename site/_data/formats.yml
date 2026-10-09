@@ -1,0 +1,11 @@
+# Speaking formats on the Speaking page.
+- name: "Keynote"
+  description: "One idea, argued with evidence, for a full room."
+- name: "Panel"
+  description: "A practitioner's view next to vendors, researchers, or peers."
+- name: "Workshop"
+  description: "Hands-on time with a team on its own data, plans, or org design."
+- name: "Guest lecture or course module"
+  description: "A single session or a short series built around a course."
+- name: "Podcast guest"
+  description: "Conversation on any of the topics above."

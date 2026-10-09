@@ -1,0 +1,55 @@
+# Career history, most recent first. Used on both About and Work.
+#   years:       shown on both pages, e.g. "2017–2020" or "2026–Present"
+#   story:       About page paragraph (first person)
+#   result:      About page "Result:" line
+#   outcomes:    Work page bullet list
+
+- company: "Inmar Intelligence"
+  title: "VP Healthcare Intelligence, Data Products & Decision Sciences"
+  years: "2026–Present"
+  current: true
+  story: "I'm building a national healthcare intelligence platform and turning it into a productized data business: data infrastructure, licensable data products, and embedded intelligence applications."
+  result: "One platform unifying pharmacy claims, recalls, returns, EDI, and revenue cycle data."
+  outcomes:
+    - "Building a national healthcare intelligence platform that unifies pharmacy claims, recalls, returns, EDI, and revenue cycle data."
+    - "Turning that platform into licensable data products and embedded intelligence applications."
+
+- company: "Inmar Intelligence"
+  title: "VP Analytics and Data Science, Media, Incentives & Loyalty"
+  years: "2023–2025"
+  story: "I brought 50+ people from scattered teams into one organization, reset how the business built and shipped data products, and launched the SaaS Analytics Portal."
+  result: "5x faster time to market and $5M in incremental EBITDA in the first year."
+  outcomes:
+    - "Consolidated 50+ people into one organization and removed 700 hours a week of duplicate work with 10 fewer FTEs."
+    - "5x faster time to market and $5M in incremental EBITDA in year one."
+    - "Launched the SaaS Analytics Portal (incrementality, marketing mix, ROAS decomposition), scaled to thousands of tenants."
+    - "Sustained 10% year-over-year revenue growth."
+
+- company: "Aki Technologies"
+  title: "VP Marketing Intelligence"
+  years: "2020–2023"
+  story: "I led a 30+ person team across the US and Mexico covering analytics, consulting strategy, media and sales planning, and data science. Every RFP and IO ran through us, and I built the advertising effectiveness measurement models myself."
+  result: "Helped grow the business from $80M to more than $100M, with $15M tied directly to better sales planning. Acquired by Inmar Intelligence."
+  outcomes:
+    - "Helped grow the business from $80M to more than $100M, with $15M tied directly to better sales planning."
+    - "Win rates up 23% and average deal size up 25% after moving planning from intuition to KPIs."
+    - "Client retention up 19%, with about 500 hours of manual work removed each year."
+
+- company: "Cheetah Digital"
+  title: "Senior Director, Analytics Services"
+  years: "2017–2020"
+  story: "I was asked to build a CRM analytics practice from nothing: service model, offerings, pricing, and go-to-market. We built it to be repeatable and sellable, and the commercial model is still in use."
+  result: "$50M+ in measurable client outcomes, with analytics revenue, team, and offerings growing 50%+ year over year."
+  outcomes:
+    - "Built a CRM analytics practice from zero, with revenue, team, and offerings growing 50%+ year over year."
+    - "$1M+ in average annual incremental revenue."
+    - "$50M+ in measurable client outcomes from applied modeling."
+
+- company: "Experian Marketing Services"
+  title: "Associate Director, Strategic Services"
+  years: "2013–2017"
+  story: "I built the business case for a new Client Success organization and led consulting for Fortune 500 clients in retail, travel, and finance."
+  result: "$30M in incremental North American revenue over two years, returning the group to growth after three years of decline."
+  outcomes:
+    - "$30M in incremental North American revenue over two years."
+    - "Returned the group to growth after three years of decline."

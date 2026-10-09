@@ -1,0 +1,136 @@
+---
+layout: default
+---
+{%- assign d = site.data.site -%}
+{%- capture mailto %}mailto:{{ d.email }}?subject=Speaking%20inquiry{% endcapture -%}
+{%- assign card = "background:#132033;border:1px solid rgba(74,158,255,0.16);border-radius:0.875rem;" -%}
+{%- assign h2style = "margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.75rem;line-height:1.2;color:#ffffff;" -%}
+{%- assign h3style = "margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.375rem;line-height:1.25;color:#ffffff;" -%}
+  <section aria-labelledby="speaking-title" style="max-width:72rem;margin:0 auto;padding:5rem 1.5rem 4.5rem;display:flex;flex-direction:column;gap:1.25rem;">
+    <p style="margin:0;font-size:1rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#4a9eff;">{{ page.eyebrow }}</p>
+    <h1 id="speaking-title" style="margin:0;max-width:20ch;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:2.75rem;line-height:1.1;color:#ffffff;text-wrap:balance;">{{ page.headline }}</h1>
+    <p style="margin:0.5rem 0 0;max-width:44rem;font-size:1.25rem;line-height:1.6;color:#ffffff;text-wrap:pretty;">{{ page.lead }}</p>
+    <p style="margin:0;max-width:44rem;text-wrap:pretty;">{{ page.intro }}</p>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:1rem 2rem;margin-top:0.75rem;">
+      <a class="x4" href="{{ mailto }}" style="display:inline-flex;align-items:center;justify-content:center;min-height:3rem;padding:0 1.75rem;border-radius:999px;background:#4a9eff;color:#0a1628;font-weight:600;font-size:1.125rem;text-decoration:none;transition:background 0.15s ease;">{{ page.primary_button }}</a>
+      <a href="#speaker-kit" style="display:inline-flex;align-items:center;min-height:2.75rem;font-weight:600;font-size:1.125rem;">{{ page.kit_heading }}</a>
+    </div>
+  </section>
+
+  <section aria-labelledby="topics-title" style="border-top:1px solid rgba(74,158,255,0.16);">
+    <div style="max-width:72rem;margin:0 auto;padding:4.5rem 1.5rem;display:flex;flex-direction:column;gap:2.5rem;">
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <h2 id="topics-title" style="{{ h2style }}">{{ page.topics_heading }}</h2>
+        <p style="margin:0;max-width:60ch;">{{ page.topics_intro }}</p>
+      </div>
+      <ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:1.5rem;">
+        {%- for t in site.data.topics %}
+        <li id="{{ t.id }}" style="display:flex;flex-direction:column;gap:0.75rem;padding:2rem;{{ card }}">
+          <h3 style="{{ h3style }}">{{ t.title }}</h3>
+          <p style="margin:0;">{{ t.summary }}</p>
+          <ul style="margin:0.5rem 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
+            {%- for talk in t.talks %}
+            <li style="padding-left:1rem;border-left:2px solid #4a9eff;color:#ffffff;">{{ talk }}</li>
+            {%- endfor %}
+          </ul>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="past-title" style="border-top:1px solid rgba(74,158,255,0.16);">
+    <div style="max-width:72rem;margin:0 auto;padding:4.5rem 1.5rem;display:flex;flex-direction:column;gap:2.5rem;">
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <h2 id="past-title" style="{{ h2style }}">{{ page.past_heading }}</h2>
+        <p style="margin:0;max-width:60ch;">{{ page.past_intro }}</p>
+      </div>
+      <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1.5rem;">
+        {%- for talk in site.data.talks %}
+        <li style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:1.5rem 3rem;padding:2.5rem;{{ card }}">
+          <div style="display:flex;flex-direction:column;gap:0.75rem;">
+            <p style="margin:0;font-size:0.875rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#a3afc0;">{{ talk.label }}</p>
+            <h3 style="{{ h3style }}text-wrap:balance;">{{ talk.title }}</h3>
+            <p style="margin:0;color:#a3afc0;">{{ talk.audience }}</p>
+            <p style="margin:0;text-wrap:pretty;">{{ talk.summary }}</p>
+          </div>
+          {%- if talk.points %}
+          <ol style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;">
+            {%- for pt in talk.points %}
+            <li style="display:grid;grid-template-columns:2rem minmax(0,1fr);gap:0.75rem;padding:0.75rem 0;border-top:1px solid rgba(74,158,255,0.16);{% if forloop.last %}border-bottom:1px solid rgba(74,158,255,0.16);{% endif %}"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:#4a9eff;">{{ forloop.index }}</span><span style="color:#ffffff;">{{ pt }}</span></li>
+            {%- endfor %}
+          </ol>
+          {%- elsif talk.figure %}
+          {% include figures/{{ talk.figure }}.html %}
+          {%- endif %}
+        </li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </section>
+
+  <section aria-labelledby="formats-title" style="border-top:1px solid rgba(74,158,255,0.16);">
+    <div style="max-width:72rem;margin:0 auto;padding:4.5rem 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:3rem 4rem;">
+      <div style="display:flex;flex-direction:column;gap:1.5rem;">
+        <h2 id="formats-title" style="{{ h2style }}">{{ page.formats_heading }}</h2>
+        <dl style="margin:0;display:flex;flex-direction:column;">
+          {%- for f in site.data.formats %}
+          <div style="padding:1rem 0;border-top:1px solid rgba(74,158,255,0.16);{% if forloop.last %}border-bottom:1px solid rgba(74,158,255,0.16);{% endif %}display:flex;flex-direction:column;gap:0.125rem;"><dt style="font-weight:600;color:#ffffff;">{{ f.name }}</dt><dd style="margin:0;">{{ f.description }}</dd></div>
+          {%- endfor %}
+        </dl>
+      </div>
+      <div id="teaching" style="display:flex;flex-direction:column;gap:1.5rem;">
+        <h2 style="{{ h2style }}">{{ page.universities_heading }}</h2>
+        <div class="prose" style="display:flex;flex-direction:column;gap:1rem;padding:2rem;{{ card }}">
+{{ content }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="speaker-kit" aria-labelledby="kit-title" style="border-top:1px solid rgba(74,158,255,0.16);">
+    <div style="max-width:72rem;margin:0 auto;padding:4.5rem 1.5rem;display:flex;flex-direction:column;gap:2.5rem;">
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <h2 id="kit-title" style="{{ h2style }}">{{ page.kit_heading }}</h2>
+        <p style="margin:0;max-width:60ch;">{{ page.kit_intro }}</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:1.5rem;align-items:start;">
+        {%- for bio in site.data.bios %}
+        <article aria-labelledby="{{ bio.id }}" style="display:flex;flex-direction:column;gap:1rem;padding:2rem;{{ card }}">
+          <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0.5rem 1rem;">
+            <h3 id="{{ bio.id }}" style="{{ h3style }}">{{ bio.title }}</h3>
+            <button class="x3" type="button" data-copy="{{ bio.id }}" style="min-height:2.75rem;padding:0 1.125rem;border:2px solid #4a9eff;border-radius:999px;background:transparent;color:#ffffff;font:inherit;font-size:1rem;font-weight:600;cursor:pointer;transition:background 0.15s ease;">Copy bio</button>
+          </div>
+          {%- for para in bio.paragraphs %}
+          <p style="margin:0;text-wrap:pretty;">{{ para }}</p>
+          {%- endfor %}
+        </article>
+        {%- endfor %}
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1.25rem;">
+        <h3 style="{{ h3style }}">{{ page.photos_heading }}</h3>
+        <ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,15rem),1fr));gap:1.5rem;">
+          {%- for ph in page.photos %}
+          <li style="display:flex;flex-direction:column;gap:0.75rem;">
+            <img src="{{ ph.file }}" alt="{{ ph.alt }}"{% if ph.width %} width="{{ ph.width }}" height="{{ ph.height }}"{% endif %} style="display:block;width:100%;height:auto;aspect-ratio:4 / 5;object-fit:cover;{{ ph.position }}border-radius:0.875rem;border:1px solid rgba(74,158,255,0.16);box-sizing:border-box;">
+            <a href="{{ ph.file }}" download="{{ ph.download_name }}" style="display:inline-flex;align-items:center;min-height:2.75rem;font-weight:600;">{{ ph.link_text }}</a>
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="book-title" style="border-top:1px solid rgba(74,158,255,0.16);">
+    <div style="max-width:72rem;margin:0 auto;padding:4.5rem 1.5rem 5rem;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:2rem 3rem;align-items:center;padding:2.5rem;{{ card }}">
+        <div style="display:flex;flex-direction:column;gap:0.75rem;">
+          <h2 id="book-title" style="{{ h2style }}">{{ page.booking_heading }}</h2>
+          <p style="margin:0;max-width:44ch;text-wrap:pretty;">{{ page.booking_text }}</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.5rem;align-items:flex-start;">
+          <a class="x4" href="{{ mailto }}" style="display:inline-flex;align-items:center;justify-content:center;min-height:3rem;padding:0 1.75rem;border-radius:999px;background:#4a9eff;color:#0a1628;font-weight:600;font-size:1.125rem;text-decoration:none;transition:background 0.15s ease;">Email {{ d.email }}</a>
+        </div>
+      </div>
+    </div>
+  </section>

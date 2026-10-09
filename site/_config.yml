@@ -1,0 +1,26 @@
+# Site settings. Most text lives in _data/*.yml and the page .md files, not here.
+title: "jacob davis • co"
+url: "https://jacobdavis.co"
+baseurl: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  # Keep straight apostrophes and quotes exactly as typed.
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

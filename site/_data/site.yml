@@ -1,0 +1,19 @@
+# Text and links used on every page (header, footer, contact block).
+
+name: "Jacob Davis"
+tagline: "(ideas + insights) simplified"
+footer_description: "The personal site of Jacob Davis: data science, strategy, and analytics, with a focus on speaking and teaching."
+
+email: "hello@jacobdavis.co"
+linkedin_url: "https://www.linkedin.com/in/jacobdavis"
+linkedin_label: "linkedin.com/in/jacobdavis"
+jda_name: "Jake Davis Analytics"
+jda_url: "https://www.jakedavisanalytics.com"
+
+contact_heading: "Get in touch"
+contact_text: "For speaking, teaching, podcasts, or anything else, email is the fastest way to reach me."
+
+copyright_year: 2026
+
+# Share image used when a page is posted on LinkedIn, Slack, etc.
+og_image: "/assets/og-share-image.jpg"

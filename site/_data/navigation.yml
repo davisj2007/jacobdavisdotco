@@ -1,0 +1,10 @@
+# Main navigation, in order. Jake Davis Analytics and Contact are added automatically after these.
+- title: "About"
+  url: "about.html"
+  path: "/about.html"
+- title: "Speaking"
+  url: "speaking.html"
+  path: "/speaking.html"
+- title: "Work"
+  url: "work.html"
+  path: "/work.html"

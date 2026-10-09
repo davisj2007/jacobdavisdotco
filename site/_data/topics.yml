@@ -1,0 +1,50 @@
+# Speaking topics. All appear on the Speaking page.
+# home: true puts the topic on the home page "What I speak about" cards (keep to three).
+# link_text is the home card link label.
+
+- id: "data-that-sells"
+  title: "Data that sells"
+  summary: "Commercializing analytics: turning models and data into products and services people pay for."
+  home: true
+  link_text: "Talks on data that sells"
+  talks:
+    - "Correct Isn't Enough: Building Data Products People Pay For"
+    - "From Ad Hoc Requests to a Data Business"
+
+- id: "data-science-practices"
+  title: "Building real data science practices"
+  summary: "Operating models, team design, and how to consolidate a fragmented analytics function without breaking it."
+  home: true
+  link_text: "Talks on data science practices"
+  talks:
+    - "Your First Data Science Team Is an Operating Model, Not a Hire"
+    - "Consolidating a Fragmented Analytics Function Without Breaking It"
+
+- id: "data-for-action"
+  title: "Using data for action"
+  summary: "Insight is not the deliverable. Decisions are. What changes when planning runs on KPIs instead of intuition."
+  home: true
+  link_text: "Talks on data for action"
+  talks:
+    - "Insight Is Not the Deliverable: Decisions Are"
+    - "KPI-Led Planning: What Changed When We Stopped Guessing"
+
+- id: "measurement"
+  title: "Measurement you can defend"
+  summary: "Media, martech, and loyalty measurement that holds up when finance asks how you know."
+  talks:
+    - "Incrementality, Mix, and ROAS Without the Hand-Waving"
+    - "Marketing Analytics Primer for Leaders"
+
+- id: "data-to-platform"
+  title: "Fragmented data to platform"
+  summary: "How scattered, siloed data becomes one asset worth licensing, with healthcare as the case study."
+  talks:
+    - "Turning Messy, Siloed Data Into a Licensable Asset"
+
+- id: "practitioner-executive"
+  title: "The practitioner-executive"
+  summary: "Leading analytics without losing touch with the work, across industries."
+  talks:
+    - "Staying Technical While Owning the P&L"
+    - "Analytics Leadership Across Industries: What Transfers and What Doesn't"

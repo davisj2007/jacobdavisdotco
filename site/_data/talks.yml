@@ -1,0 +1,26 @@
+# Past talks on the Speaking page, in display order.
+# Each talk shows EITHER a numbered list of `points` OR a `figure`.
+# figure: the name of a file in _includes/figures/ (without .html).
+# To add a talk with no figure or points, just leave both out.
+
+- label: "Conference talk · Shop.org"
+  title: "4 Big Ideas About Data to Bridge Digital and Traditional Commerce"
+  audience: "For retail marketing and e-commerce leaders"
+  summary: "Data won't close the gap between stores and digital on its own, and much of what retailers hear about data won't help. Four contrarian ideas for building a better marketing strategy instead."
+  points:
+    - "Being data-driven is a trap. Being data-informed is good marketing."
+    - "Invest in insight, not reporting."
+    - "Artificial intelligence won't save you. Augmented intelligence might."
+    - "Channels mostly don't matter. If your value proposition changes by channel, ask why."
+
+- label: "Workshop · Training"
+  title: "We Can All Perform Better Analysis"
+  audience: "For client success, strategy, and sales teams at a marketing technology company"
+  summary: "A working session for non-analysts on what analysis is, what it isn't, and the mistakes that make most analyses wrong. Built to raise the bar across a services organization, not just inside the data team."
+  figure: "back-to-the-future"
+
+- label: "Conference talk · Future of Email"
+  title: "Email Analytics (Re)imagined"
+  audience: "For email and CRM marketers"
+  summary: "Most email reporting answers what happened. This talk shows how to get to what it means: questioning familiar metrics, engineering better ones from data you already have, and measuring customers instead of campaigns."
+  figure: "click-to-open"

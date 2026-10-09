@@ -1,0 +1,48 @@
+# "Selected analytical work" on the Work page, in display order.
+#   show: false hides a case without deleting it.
+#   sector, metric, metric_label are optional.
+#   figure: the name of a file in _includes/figures/ (without .html).
+
+- id: "case-lead"
+  show: true
+  title: "Which signals actually predict a sale"
+  summary: "A lead scoring model asked which prospect behaviors carried real weight. Repeated hand-raises and event attendance mattered most. Email sends and clicks barely registered, which changed where the sales team spent its time."
+  figure: "lead-scoring"
+
+- id: "case-breadth"
+  show: true
+  sector: "Home furnishings retail"
+  title: "The rarest first purchase was the most valuable one"
+  metric: "23x"
+  metric_label: "Median spend of customers buying across all five product categories, versus single-category buyers."
+  summary: "Five years of transactions showed that category breadth, not order count, drove customer value. Fewer than 2% of customers started with a dining table, yet those who did had a 64% chance of buying again and 55% higher five-year value than the most common entry point."
+  figure: "category-breadth"
+
+- id: "case-circular"
+  show: true
+  sector: "Discount retail"
+  title: "Proving a digital circular sold more than it cost"
+  metric: "$5.52"
+  metric_label: "Incremental revenue per media dollar, measured against a matched unexposed control."
+  summary: "A matched-control study on card-transaction data showed the mobile circular pulled in new buyers and took share from rival chains. It also showed the frequency cap was holding it back: households that saw it more often had 13% higher lift."
+  figure: "digital-circular"
+
+- id: "case-sister"
+  show: true
+  sector: "Specialty apparel retail"
+  title: "When a new brand quietly costs the old one"
+  metric: "−30%"
+  metric_label: "Flagship email revenue versus its expected trend after an outlet sister brand launched."
+  summary: "There was no holdout, so matched comparison programs and a Bayesian structural time series model built the counterfactual. Opens held steady while clicks and revenue fell, which ruled out creative and deliverability. Demand was moving to the sister brand, roughly $28M over the period."
+  figure: "sister-brand"
+
+# Hidden by default: built from a current-employer deck marked confidential.
+# Set show: true only after it is cleared.
+- id: "case-pen"
+  show: false
+  sector: "Consumer packaged goods"
+  title: "What it would actually take to hit the penetration target"
+  metric: "1.6x"
+  metric_label: "Annual marketing spend needed to reach the target, versus the most aggressive plan under consideration."
+  summary: "With 29 months of data, two beta regression models did separate jobs: one projected penetration with fitted adstock across 8,000+ scenarios, the other optimized the spend mix. The brand left with an honest gap, a price for closing it, and a no-cost reallocation worth about 10%."
+  figure: "penetration-target"

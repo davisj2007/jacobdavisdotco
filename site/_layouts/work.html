@@ -1,0 +1,62 @@
+---
+layout: default
+---
+{%- assign card = "background:#132033;border:1px solid rgba(74,158,255,0.16);border-radius:0.875rem;" -%}
+{%- assign h3style = "margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.375rem;line-height:1.25;color:#ffffff;" -%}
+  <section aria-labelledby="work-title" style="max-width:72rem;margin:0 auto;padding:5rem 1.5rem 4.5rem;display:flex;flex-direction:column;gap:1.25rem;">
+    <p style="margin:0;font-size:1rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#4a9eff;">{{ page.eyebrow }}</p>
+    <h1 id="work-title" style="margin:0;max-width:20ch;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:2.75rem;line-height:1.1;color:#ffffff;text-wrap:balance;">{{ page.headline }}</h1>
+    <p style="margin:0.5rem 0 0;max-width:44rem;font-size:1.25rem;line-height:1.6;color:#ffffff;text-wrap:pretty;">{{ page.lead }}</p>
+  </section>
+
+  <section aria-labelledby="outcomes-title" style="border-top:1px solid rgba(74,158,255,0.16);">
+    <div style="max-width:72rem;margin:0 auto;padding:4.5rem 1.5rem;display:flex;flex-direction:column;gap:2.5rem;">
+      <h2 id="outcomes-title" style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.75rem;line-height:1.2;color:#ffffff;">{{ page.outcomes_heading }}</h2>
+      <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;">
+        {%- for job in site.data.career %}
+        <li style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:1rem 3rem;padding:2rem 0;border-top:1px solid rgba(74,158,255,0.16);{% if forloop.last %}border-bottom:1px solid rgba(74,158,255,0.16);{% endif %}">
+          <div style="display:flex;flex-direction:column;gap:0.25rem;">
+            <h3 style="{{ h3style }}">{{ job.company }}</h3>
+            <p style="margin:0;font-weight:500;color:#ffffff;">{{ job.title }}</p>
+            <p style="margin:0;color:#a3afc0;">{{ job.years }}</p>
+          </div>
+          <ul style="margin:0;padding:0 0 0 1.25rem;display:flex;flex-direction:column;gap:0.5rem;">
+            {%- for o in job.outcomes %}
+            <li>{{ o }}</li>
+            {%- endfor %}
+          </ul>
+        </li>
+        {%- endfor %}
+      </ol>
+      <p style="margin:0;">{{ page.about_line }} <a href="about.html">{{ page.about_link }}</a>.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="cases-title" style="border-top:1px solid rgba(74,158,255,0.16);">
+    <div style="max-width:72rem;margin:0 auto;padding:4.5rem 1.5rem;display:flex;flex-direction:column;gap:2.5rem;">
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <h2 id="cases-title" style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.75rem;line-height:1.2;color:#ffffff;">{{ page.cases_heading }}</h2>
+        <p style="margin:0;max-width:60ch;">{{ page.cases_intro }}</p>
+      </div>
+      {%- for c in site.data.case_studies %}
+      {%- if c.show %}
+      <article aria-labelledby="{{ c.id }}-title" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:2rem 3rem;align-items:center;padding:2.5rem;{{ card }}">
+        <div style="display:flex;flex-direction:column;gap:1rem;max-width:{% if c.metric %}46ch{% else %}44ch{% endif %};">
+          {%- if c.sector %}<p style="margin:0;font-size:0.875rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#a3afc0;">{{ c.sector }}</p>{% endif %}
+          <h3 id="{{ c.id }}-title" style="{{ h3style }}{% if c.sector %}text-wrap:balance;{% endif %}">{{ c.title }}</h3>
+          {%- if c.metric %}<div style="display:flex;flex-direction:column;gap:0.375rem;padding-top:1rem;border-top:2px solid #4a9eff;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:2.75rem;line-height:1;color:#4a9eff;">{{ c.metric }}</span><span style="font-size:1rem;line-height:1.5;color:#c5d0de;">{{ c.metric_label }}</span></div>{% endif %}
+          <p style="margin:0;text-wrap:pretty;">{{ c.summary }}</p>
+        </div>
+        {% if c.figure %}{% include figures/{{ c.figure }}.html %}{% endif %}
+      </article>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section id="advisory" aria-labelledby="advisory-title" style="border-top:1px solid rgba(74,158,255,0.16);">
+    <div class="prose" style="max-width:72rem;margin:0 auto;padding:3.5rem 1.5rem 5rem;display:flex;flex-direction:column;gap:0.75rem;">
+      <h2 id="advisory-title" style="{{ h3style }}">{{ page.advisory_heading }}</h2>
+{{ content }}
+    </div>
+  </section>
