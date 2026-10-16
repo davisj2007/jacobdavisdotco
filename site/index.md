@@ -6,7 +6,7 @@ description: "Jacob Davis is a data science, strategy, and analytics executive w
 person_schema: true
 
 hero_image: "assets/jake_headshot_muted.jpg"
-hero_image_alt: "Jacob Davis, smiling, in a dark suit and red tie"
+hero_image_alt: "Jacob Davis, smiling, in a navy blazer and checked shirt"
 headline: "Data science, strategy, and analytics executive. <br>I build and lead teams that focus on what's useful, not just correct."
 intro: "I'm a practitioner first: I build analytics organizations and data businesses across CRM, media measurement, martech, loyalty, and healthcare, then speak and teach about what made them work."
 primary_button: "Speaking"
