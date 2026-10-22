@@ -27,15 +27,16 @@ kit_heading: "Speaker kit"
 kit_intro: "For organizers: bios and photos, cleared for event programs, websites, and promotion."
 photos_heading: "Photos"
 photos:
-  - file: "assets/jake_headshot.jpg"
-    alt: "Jacob Davis headshot, full color, in a dark suit and red tie"
+  - file: "assets/jake_headshot_hero.jpg"
+    download: "assets/jake_headshot.jpg"
+    alt: "Jacob Davis headshot, in black and white against a blue background"
     width: 768
     height: 1024
     position: "object-position:50% 20%;"
     download_name: "jacob-davis-headshot.jpg"
-    link_text: "Download headshot (JPG)"
-  - file: "assets/jake_speaking_duotone.jpg"
-    alt: "Jacob Davis speaking on stage at a Cheetah Digital event"
+    link_text: "Download headshot (full-color JPG)"
+  - file: "assets/jake_speaking.jpg"
+    alt: "Jacob Davis speaking on stage at a Cheetah Digital event, in black and white against a blue background"
     download_name: "jacob-davis-speaking.jpg"
     link_text: "Download speaking photo (JPG)"
 
