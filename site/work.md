@@ -7,7 +7,6 @@ redirect_from:
   - /services.html
   - /prism-methodology.html
 
-eyebrow: "Work"
 headline: "Outcomes, role by role."
 lead: "The numbers behind the career, most recent first, followed by a few pieces of analytical work that show how I approach a problem."
 

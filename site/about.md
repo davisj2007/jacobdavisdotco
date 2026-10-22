@@ -4,7 +4,6 @@ layout: about
 title: "About Jacob Davis"
 description: "About Jacob Davis: career arc from Experian to Inmar, how he thinks about analytics, and life in the Hudson Valley."
 
-eyebrow: "About"
 headline: "What gets built has to be useful, not just correct."
 lead: "That idea has held in every industry I've worked in. A correct model that nobody buys or uses is a cost. Analytics only matters when it changes a decision, ships as a product, or shows up in revenue."
 intro: "I'm a data science, strategy, and analytics executive, and a practitioner first. My career has moved steadily closer to the commercial outcome: from analyst and consultant, to building practices from scratch, to leading full-funnel commercial analytics, to running data businesses."

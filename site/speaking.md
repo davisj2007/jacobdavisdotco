@@ -5,7 +5,6 @@ title: "Speaking and teaching"
 description: "Jacob Davis speaks and teaches on commercializing analytics, building data science practices, and using data for action. Keynotes, panels, workshops, guest lectures, and podcasts."
 anchor_offset: true
 
-eyebrow: "Speaking and teaching"
 headline: "Talks on making data pay off for the business."
 lead: "I speak to conference audiences, university programs, and corporate teams about what it takes to turn analytics into decisions, products, and revenue. Every talk comes from work I've led, with real numbers."
 intro: "I take on both paid and unpaid engagements. The best fit is an audience that has to make data useful, not just accurate."
@@ -29,9 +28,9 @@ kit_intro: "For organizers: bios and photos, cleared for event programs, website
 photos_heading: "Photos"
 photos:
   - file: "assets/jake_headshot.jpg"
-    alt: "Jacob Davis headshot, full color"
-    width: 1086
-    height: 1448
+    alt: "Jacob Davis headshot, full color, in a dark suit and red tie"
+    width: 768
+    height: 1024
     position: "object-position:50% 20%;"
     download_name: "jacob-davis-headshot.jpg"
     link_text: "Download headshot (JPG)"
