@@ -1,16 +1,21 @@
 # "Things I build" on the Work page, in display order.
 #   show: false hides a product without deleting it.
+#   mark: a file in _includes/marks/ (without .html), shown above the sector label.
+#   image: path prefix of a screenshot; -480.webp and -720.webp versions must exist.
 #   sector, metric, metric_label, caption, and links are optional.
 #   links: each has text and url; they open in a new tab.
 
 - id: "product-athand"
   show: true
+  mark: "athand"
   sector: "Consumer iOS app, 2026"
   title: "A household records app that never asks for an account"
   metric: "0"
   metric_label: "accounts, ads, or analytics SDKs"
   summary: "atHand keeps a household's IDs, insurance cards, vehicle details, and pet records on the iPhone, reads documents on the device, and suggests the right record when it's needed. I built it solo, with privacy and accessibility as release requirements."
   caption: "Your information stays on this device. iPhone only. Free to start, one-time purchase."
+  image: "assets/athand/home-dark"
+  image_alt: "The atHand home screen in dark mode. A banner reads “Flight to Denver, your recommended info is ready.” Below it are a search field, three suggested records, Your People with Sam Rivera, and Your Vehicles with a 2020 Honda Civic."
   links:
     - text: "View on the App Store"
       url: "https://apps.apple.com/app/apple-store/id6817842698?pt=129145504&ct=jacobdavis&mt=8"
