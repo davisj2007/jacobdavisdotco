@@ -19,6 +19,10 @@ about_link: "About page"
 cases_heading: "Selected analytical work"
 cases_intro: "Client work, anonymized. Sectors are real; names, dates, and identifying details are withheld."
 
+# Products are in _data/products.yml.
+products_heading: "Things I build"
+products_intro: "Products I design, build, and ship myself."
+
 # The advisory paragraph is the text below the closing --- line.
 advisory_heading: "Advisory"
 ---

@@ -53,6 +53,39 @@ layout: default
     </div>
   </section>
 
+  <section id="things-i-build" aria-labelledby="products-title" style="border-top:1px solid rgba(74,158,255,0.16);">
+    <div style="max-width:72rem;margin:0 auto;padding:4.5rem 1.5rem;display:flex;flex-direction:column;gap:2.5rem;">
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <h2 id="products-title" style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.75rem;line-height:1.2;color:#ffffff;">{{ page.products_heading }}</h2>
+        <p style="margin:0;max-width:60ch;">{{ page.products_intro }}</p>
+      </div>
+      {%- for c in site.data.products %}
+      {%- if c.show %}
+      <article aria-labelledby="{{ c.id }}-title" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:2rem 3rem;align-items:center;padding:2.5rem;{{ card }}">
+        <div style="display:flex;flex-direction:column;gap:1rem;max-width:{% if c.metric %}46ch{% else %}44ch{% endif %};">
+          {%- if c.sector %}<p style="margin:0;font-size:0.875rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#a3afc0;">{{ c.sector }}</p>{% endif %}
+          <h3 id="{{ c.id }}-title" style="{{ h3style }}{% if c.sector %}text-wrap:balance;{% endif %}">{{ c.title }}</h3>
+          {%- if c.metric %}<div style="display:flex;flex-direction:column;gap:0.375rem;padding-top:1rem;border-top:2px solid #4a9eff;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:2.75rem;line-height:1;color:#4a9eff;">{{ c.metric }}</span><span style="font-size:1rem;line-height:1.5;color:#c5d0de;">{{ c.metric_label }}</span></div>{% endif %}
+          <p style="margin:0;text-wrap:pretty;">{{ c.summary }}</p>
+        </div>
+        {%- if c.caption or c.links %}
+        <div style="display:flex;flex-direction:column;gap:1rem;">
+          {%- if c.links %}
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0.25rem;">
+            {%- for l in c.links %}
+            <li><a href="{{ l.url }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:2.75rem;font-weight:600;">{{ l.text }}{% include newtab.html %}</a></li>
+            {%- endfor %}
+          </ul>
+          {%- endif %}
+          {%- if c.caption %}<p style="margin:0;font-size:1rem;color:#a3afc0;text-wrap:pretty;">{{ c.caption }}</p>{% endif %}
+        </div>
+        {%- endif %}
+      </article>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+  </section>
+
   <section id="advisory" aria-labelledby="advisory-title" style="border-top:1px solid rgba(74,158,255,0.16);">
     <div class="prose" style="max-width:72rem;margin:0 auto;padding:3.5rem 1.5rem 5rem;display:flex;flex-direction:column;gap:0.75rem;">
       <h2 id="advisory-title" style="{{ h3style }}">{{ page.advisory_heading }}</h2>

@@ -23,4 +23,7 @@ writing_heading: "Writing"
 jda_description: "Jake Davis Analytics is where I publish independent analytical work: long-form pieces on uncertainty, small samples, and what the data can and can't tell you, using the NFL and other leagues as the test case."
 jda_note: "The publication also maintains public NFL models and interactive tools."
 jda_link: "Read Jake Davis Analytics"
+
+# Line below the Writing card, linking to "Things I build" on the Work page.
+products_link: "I also build products, starting with atHand"
 ---
